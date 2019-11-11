@@ -21,9 +21,7 @@ public class InstanceArrayExample {
 			if(cards[i] != null)
 			{
 				System.out.println("cards[" + i + "]はnull");
-				break;
 			}
-			System.out.println("cards[" + i + "]の" + "idは" + cards[i].id + "、nameは" + cards[i].name);
 		}
 	}
 }
