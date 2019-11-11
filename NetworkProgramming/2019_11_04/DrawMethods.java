@@ -1,6 +1,6 @@
 import java.util.*;
 
-class drawMethods
+class DrawMethods
 {
     public static void main(String[] args)
     {
