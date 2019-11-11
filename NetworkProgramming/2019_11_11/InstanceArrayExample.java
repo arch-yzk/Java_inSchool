@@ -14,5 +14,16 @@ public class InstanceArrayExample {
 		for (int i = 0; i < 3; i++) {
 			System.out.println("cards[" + i + "]の" + "idは" + cards[i].id + "、nameは" + cards[i].name);
 		}
+
+		cards[1] = null;
+
+		for (int i = 0; i < 3; i++) {
+			if(cards[i] != null)
+			{
+				System.out.println("cards[" + i + "]はnull");
+				break;
+			}
+			System.out.println("cards[" + i + "]の" + "idは" + cards[i].id + "、nameは" + cards[i].name);
+		}
 	}
 }
