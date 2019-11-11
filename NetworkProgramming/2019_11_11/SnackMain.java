@@ -9,7 +9,7 @@ public class SnackMain
         snack[2] = new Snack();
 
         snack[0].id = 1;
-        snack[0].name = "ココナッツサブレ";
+        snack[0].name = "ココナッツサブレ";//好きなお菓子無いので勘弁してください
         snack[0].makerName = "日清シスコ";
         snack[0].price = 100;
         snack[0].taste = "サクサクして、ココナッツの香ばしさがたまらない!!";
