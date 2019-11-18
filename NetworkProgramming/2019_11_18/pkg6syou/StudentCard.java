@@ -8,18 +8,33 @@ class StudentCard {
 	//コンストラクタ
 	StudentCard()
 	{
+		this(0, "未定義");
+		/*
 		this.id = 0;
 		this.name = "未定義";
-	}
+		*/
+	}//両方の可変変数が存在するコンストラクタの呼び出し
+
 
 	StudentCard(String name)
 	{
 		this.name = name;
 	}
 
+	StudentCard(int id)
+	{
+		this.id = id;
+		this.name = "未定義";
+	}
+
 	StudentCard(int id, String name)
 	{
 		this.id = id;
 		this.name = name;
+	}
+
+	StudentCard(String name, int id)
+	{
+		this(id, name);
 	}
 }
