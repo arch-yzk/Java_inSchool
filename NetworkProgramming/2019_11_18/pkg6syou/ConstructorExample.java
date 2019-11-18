@@ -1,7 +1,5 @@
 package pkg6syou;
 
-
-
 public class ConstructorExample {
 	public static void main(String[] args) {
 		StudentCard a = new StudentCard(1234, "鈴木太郎");
