@@ -26,6 +26,7 @@ public class VirtualPetGame {
 		jiro.walk();
 		jiro.printInfo();
 
+		//マスターの変更
 		VirtualDog.master = "Yuzuki";
 
 		VirtualDog saburo = new VirtualDog("サブロー", 60, 30);

@@ -28,33 +28,49 @@ public class VirtualPetGameMenu {
 		
 		
 		for(;;){
-			System.out.print("\n■何をさせますか？\n1:状態表示  2:歩く  3:眠る  4:走る  5:吠える  6:エサを食べる  9:やめる→");
-			
-			int no = sc.nextInt();
-			
-			switch(no){
-				case 1:
-					wan.printInfo();
-					break;
-				case 2:
-					wan.walk();
-					break;
-				case 3:
-					wan.sleep();
-					break;
-				case 4:
-					
-					break;
-				case 5:
-					System.out.print("何回？→");		int count = sc.nextInt();
-					
-					break;
-				case 6:
-					
-					break;
+			if(wan.energy == 0)
+			{
+				System.out.println("終了します");
+				break;
 			}
-			if(no == 9) break;
-		
+			else
+			{
+				if(wan.energy == 0)
+				{
+					System.out.println("終了します");
+					break;
+				}
+				System.out.print("\n■何をさせますか？\n1:状態表示  2:歩く  3:眠る  4:走る  5:吠える  6:エサを食べる  9:やめる→");
+			
+				int no = sc.nextInt();
+			
+				switch(no){
+					case 1:
+						wan.printInfo();
+						break;
+					case 2:
+						wan.walk();
+						break;
+					case 3:
+						wan.sleep();
+						break;
+					case 4:
+						wan.run();
+						break;
+					case 5:
+						System.out.print("何回？→");		
+						int count = sc.nextInt();
+						wan.bark(count);
+						break;
+					case 6:
+						wan.eat();
+						break;
+				}
+				if(no == 9)
+				{
+					break;
+				}
+			}
 		}
 	}
 }
