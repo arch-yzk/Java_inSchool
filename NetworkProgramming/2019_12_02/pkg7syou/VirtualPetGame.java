@@ -3,21 +3,22 @@ package pkg7syou;
 public class VirtualPetGame {
 
 	public static void main(String[] args) {
-		VirtualDog taro = new VirtualDog("ã‚¿ãƒ­", 100, 50);
-		//VirtualBird piyo = new VirtualBird("ãƒ”ãƒ¨", 60, 30);
+		VirtualDog taro = new VirtualDog("ƒ^ƒ", 100, 50);
+		VirtualBird piyo = new VirtualBird("ƒsƒˆ", 60, 30);
 
-		//ç§»å‹•ã¨ç¡çœ ã‚’è¡Œã‚ã›ã‚‹
+		//ˆÚ“®‚Æ‡–°‚ğs‚í‚¹‚é
 		
-		//ã¾ãšã¯ã€ã‚¿ãƒ­ã‹ã‚‰ã€‚
+		//‚Ü‚¸‚ÍAƒ^ƒ‚©‚çB
 		taro.move();		
 		taro.sleep();
 		
-		//æ¬¡ã«ãƒ”ãƒ¨ã€‚
-		//piyo.move();
-		//piyo.sleep();
+		//Ÿ‚ÉƒsƒˆB
+		piyo.move();
+		piyo.sleep();
 		
 		
-		//ã“ã®ãƒ«ãƒ¼ãƒ†ã‚£ãƒ¼ãƒ³ï¼ˆå‹•ãâ†’å¯ã‚‹ï¼‰ã‚’ç™»éŒ²ã—ãŸã„â†’moveAndSleep()ãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½œæˆã™ã‚‹
-		
+		//‚±‚Ìƒ‹[ƒeƒB[ƒ“i“®‚­¨Q‚éj‚ğ“o˜^‚µ‚½‚¢¨moveAndSleep()ƒƒ\ƒbƒh‚ğì¬‚·‚é
+		taro.moveAndSleep();
+		piyo.moveAndSleep();
 	}
 }

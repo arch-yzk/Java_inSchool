@@ -8,11 +8,17 @@ class VirtualDog extends VirtualPet {
 
 	void move() {
 		if (this.energy < 10) {
-			System.out.println(this.name + "ï¼šç–²ã‚Œã¡ã‚ƒã£ã¦ã€ã“ã‚Œä»¥ä¸Šæ­©ã‘ãªã„ã‚ˆã€‚");
+			System.out.println(this.name + "F”æ‚ê‚¿‚á‚Á‚ÄA‚±‚êˆÈã•à‚¯‚È‚¢‚æB");
 		} else {
-			System.out.println(this.name + "ï¼šæ­©ã„ãŸã‚ˆã€‚ä½“åŠ›ãŒ10æ¸›ã£ãŸã€‚æœ€å¤§ä½“åŠ›ãŒ1å¢—ãˆãŸã€‚");
-			this.energy -= 10; // ä½“åŠ›ãŒ10æ¸›ã‚‹
-			this.maxEnergy++; // æœ€å¤§ä½“åŠ›ãŒ1å¢—ãˆã‚‹
+			System.out.println(this.name + "F•à‚¢‚½‚æB‘Ì—Í‚ª10Œ¸‚Á‚½BÅ‘å‘Ì—Í‚ª1‘‚¦‚½B");
+			this.energy -= 10; // ‘Ì—Í‚ª10Œ¸‚é
+			this.maxEnergy++; // Å‘å‘Ì—Í‚ª1‘‚¦‚é
 		}
+	}
+
+	void moveAndSleep()
+	{
+		this.move();
+		this.sleep();
 	}
 }

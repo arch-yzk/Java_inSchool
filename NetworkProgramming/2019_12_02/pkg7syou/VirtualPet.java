@@ -1,9 +1,9 @@
 package pkg7syou;
 
 class VirtualPet {
-	String name; // åå‰
-	int maxEnergy; // æœ€å¤§ä½“åŠ›
-	int energy; // ç¾åœ¨ã®ä½“åŠ›
+	String name; // –¼‘O
+	int maxEnergy; // Å‘å‘Ì—Í
+	int energy; // Œ»İ‚Ì‘Ì—Í
 
 	VirtualPet(String name, int maxEnergy, int energy) {
 		this.name = name;
@@ -12,15 +12,15 @@ class VirtualPet {
 	}
 
 	void sleep() {
-		System.out.println(this.name + "ï¼šã‚ˆãå¯ãŸã€‚ä½“åŠ›ãŒå›å¾©ã—ãŸã‚ˆã€‚");
-		this.energy = this.maxEnergy; // ç¾åœ¨ã®ä½“åŠ›ã®å€¤ã‚’æœ€å¤§ä½“åŠ›ã®å€¤ã«ã™ã‚‹
+		System.out.println(this.name + "F‚æ‚­Q‚½B‘Ì—Í‚ª‰ñ•œ‚µ‚½‚æB");
+		this.energy = this.maxEnergy; // Œ»İ‚Ì‘Ì—Í‚Ì’l‚ğÅ‘å‘Ì—Í‚Ì’l‚É‚·‚é
 	}
 
 	void printInfo() {
-		System.out.println("[çŠ¶æ…‹å‡ºåŠ›]");
-		System.out.println("åå‰ï¼š" + this.name);
-		System.out.println("æœ€å¤§ä½“åŠ›ï¼š" + this.maxEnergy);
-		System.out.println("ä½“åŠ›ï¼š" + this.energy);
+		System.out.println("[ó‘Ôo—Í]");
+		System.out.println("–¼‘OF" + this.name);
+		System.out.println("Å‘å‘Ì—ÍF" + this.maxEnergy);
+		System.out.println("‘Ì—ÍF" + this.energy);
 	}
 
 	void move() {
