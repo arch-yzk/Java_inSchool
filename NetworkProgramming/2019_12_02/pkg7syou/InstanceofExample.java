@@ -1,34 +1,60 @@
 package pkg7syou;
 class Person {
-	// Person(äºº)ã‚¯ãƒ©ã‚¹ã®å†…å®¹
+	// Person(l)ƒNƒ‰ƒX‚Ì“à—e
+	void work()
+	{
+		System.out.println("lŠÔ‚Å‚·");
+	}
 }
 
 class Student extends Person {
-	// Student(å­¦ç”Ÿ)ã‚¯ãƒ©ã‚¹ã®å†…å®¹
+	// Student(Šw¶)ƒNƒ‰ƒX‚Ì“à—e
+	void work()
+	{
+		System.out.println("Šw¶‚Å‚·");
+	}
 }
 
 class Teacher extends Person {
-	// Teacher(æ•™å“¡)ã‚¯ãƒ©ã‚¹ã®å†…å®¹
+	// Teacher(‹³ˆõ)ƒNƒ‰ƒX‚Ì“à—e
+	void work()
+	{
+		System.out.println("‹³ˆõ‚Å‚·");
+	}
+
+	void makeTest()
+	{
+		System.out.println("ƒeƒXƒgì‚ê‚Ü‚·");
+	}
 }
 
 public class InstanceofExample {
-	public static void main(String[] args) {
-		Person[] persons = new Person[3];
+	public static void main(final String[] args) {
+		final Person[] persons = new Person[3];
 		persons[0] = new Person();
 		persons[1] = new Student();
 		persons[2] = new Teacher();
 
-		for (int i = 0; i < persons.length; i++) {
-			if (persons[i] instanceof Person) {
-				System.out.println("persons[" + i + "]ã¯Personã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã§ã™");
-			}
-			if (persons[i] instanceof Student) {
-				System.out.println("persons[" + i + "]ã¯Studentã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã§ã™");
-			}
-			if (persons[i] instanceof Teacher) {
-				System.out.println("persons[" + i + "]ã¯Teacherã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã§ã™");
+		for (final Person p : persons) // ƒ‹[ƒv‚µ‚Äp‚ÅQÆ
+		{
+			p.work();
+
+			if(p instanceof Teacher)
+			{
+				((Teacher)p).nameTest(); //persons”z—ñ‚Å‚Í‚È‚­p‚ÉŠ|‚¯‚½‚¢
 			}
 		}
-	}
 
+		/*for (int i = 0; i < persons.length; i++) {
+			if (persons[i] instanceof Person) {
+				System.out.println("persons[" + i + "]‚ÍPersonƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Å‚·");
+			}
+			if (persons[i] instanceof Student) {
+				System.out.println("persons[" + i + "]‚ÍStudentƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Å‚·");
+			}
+			if (persons[i] instanceof Teacher) {
+				System.out.println("persons[" + i + "]‚ÍTeacherƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Å‚·");
+			}
+		}*/
+	}
 }
