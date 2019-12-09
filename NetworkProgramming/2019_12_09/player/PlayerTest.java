@@ -19,5 +19,5 @@ class PlayerTest {
 		cp.cleanUp();	//CDクリーニング
 		vp.printInfo();	//Video製造番号の表示
 		vp2.printInfo();	//２台目の表示（idが２）
-  }
+	}
 }

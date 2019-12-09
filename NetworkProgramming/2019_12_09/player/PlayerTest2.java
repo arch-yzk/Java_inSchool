@@ -13,9 +13,5 @@ class PlayerTest2 {
 		pp.stop();		//PP停止
 		
 		pp.changeColor(Coloring.RED);		//色を替える
-		
-		
-		
-  	
-  }
+	}
 }

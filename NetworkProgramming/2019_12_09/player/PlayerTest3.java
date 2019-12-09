@@ -21,7 +21,5 @@ class PlayerTest3 {
 		
 		
 		
-		
-  	
-  }
+	}
 }

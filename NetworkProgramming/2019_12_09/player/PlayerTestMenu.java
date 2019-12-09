@@ -3,7 +3,7 @@ import java.util.*;
 //メニューから選んで、プレーヤーを操作しよう
 class PlayerTestMenu {
 	public static void main( String[] args ){
-  	
+		
 		//配列扱う
 		Player[] p = new Player[3];
 		p[0] = new VideoPlayer();
