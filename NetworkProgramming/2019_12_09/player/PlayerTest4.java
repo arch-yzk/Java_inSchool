@@ -2,8 +2,8 @@
 //各プレーヤーを配列でまとめて操作してみよう
 
 class PlayerTest4 {
-	public static void main( String[] args ){
-  	
+	public static void main(String[] args ){
+
 		//配列で扱う
 		Player[] p = new Player[3];
 		p[0] = new VideoPlayer();
@@ -20,7 +20,10 @@ class PlayerTest4 {
 			//a.slow();
 			//スローはどう呼ぶ？
 			//if(a instanceof ??? )	((???)a).slow();
-			
+			if(a instanceof VideoPlayer)
+			{
+				((VideoPlayer)a).slow();
+			}
 		}
 	}
 }

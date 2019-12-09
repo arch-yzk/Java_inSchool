@@ -28,4 +28,9 @@ class VideoPlayer implements Player
     {
         System.out.println("■ビデオ再生終了\n");
     }
+
+    public void slow()
+    {
+        System.out.println("■スロー再生");
+    }
 }

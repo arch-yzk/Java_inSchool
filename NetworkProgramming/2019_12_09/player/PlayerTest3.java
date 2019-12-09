@@ -15,7 +15,7 @@ class PlayerTest3 {
 		vp.stop();		//video停止
 		
 		pp.play();		//PP再生
-		pp.slow();		//PP再生	//エラーならOK、コメントにしてください
+		//pp.slow();		//PP再生	//エラーならOK、コメントにしてください
 		pp.stop();		//PP停止
 		
 		
