@@ -1,0 +1,3 @@
+
+//VideoPlayerクラス（Playerインタフェースを実装）
+
