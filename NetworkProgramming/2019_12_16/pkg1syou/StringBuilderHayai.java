@@ -1,5 +1,3 @@
-package pkg1syou;
-
 public class StringBuilderHayai {
 
 	public static void main(String[] args) {
@@ -20,7 +18,7 @@ public class StringBuilderHayai {
 			// Stringの「＋」を使って連結		→遅い
 			t1 = System.currentTimeMillis();
 			System.out.println("100000回、＋");
-			String str="";
+			String str = "";
 			for(int i = 0; i < 100000; i++) {
 				str+="Hello";
 			}

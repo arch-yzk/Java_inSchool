@@ -1,5 +1,3 @@
-package pkg1syou;
-
 class SimpleClass {
 	String str;
 	SimpleClass(String str) {

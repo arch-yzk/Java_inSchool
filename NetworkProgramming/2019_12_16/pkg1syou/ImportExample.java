@@ -1,5 +1,3 @@
-package pkg1syou;
-
 import java.util.Random;
 
 class ImportExample {

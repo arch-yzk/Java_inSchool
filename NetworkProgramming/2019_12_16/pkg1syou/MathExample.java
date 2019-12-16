@@ -1,5 +1,3 @@
-package pkg1syou;
-
 public class MathExample {
 	public static void main(String[] args) {
 		System.out.println("-5の絶対値は" + Math.abs(-5));

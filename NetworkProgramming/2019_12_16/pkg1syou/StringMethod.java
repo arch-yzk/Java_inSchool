@@ -1,5 +1,3 @@
-package pkg1syou;
-
 class StringMethod {
 
 	public static void main(String[] args) {

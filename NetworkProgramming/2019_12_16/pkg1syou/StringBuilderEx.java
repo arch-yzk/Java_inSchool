@@ -1,4 +1,3 @@
-package pkg1syou;
 
 //文字列StringBufferクラス・・・可変の文字列操作
 
