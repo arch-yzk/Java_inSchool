@@ -5,6 +5,6 @@ public class IStudentCard extends StudentsCard {
     void printInfo()
     {
         super.printInfo();
-        System.out.printl("国籍" + this.nationality);
+        System.out.println("国籍" + this.nationality);
     }
 }

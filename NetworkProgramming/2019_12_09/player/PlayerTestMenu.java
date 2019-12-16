@@ -26,18 +26,37 @@ class PlayerTestMenu {
 				for(;;){				
 					int no2;
 					do{
-						System.out.print("1:再生 (9:戻る）→");
+						System.out.print("1:再生 2:停止 3:スロー (9:戻る）→");
 						no2 = sc.nextInt();
-					}while( no2 != 1 && no2 != 9 );
+					}while( no2 != 1 && no2 != 2 && no2 != 3 && no2 != 9 );
 					
 					if(no2 == 1){
 						p[no-1].play();
 					}
-					else	break;
+					else if(no2 == 2)
+					{
+						p[no-1].stop();
+					}
+					else if(no2 == 3)
+					{
+						if(no == 1)
+						{
+							((VideoPlayer)p[no-1]).slow();
+						}
+						else
+						{
+							System.out.println("対応していません");
+						}
+					}
+					
+					
+					else break;
 					
 				}
 				
 			}
 		}
+
+		sc.close();
 	}
 }
