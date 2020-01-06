@@ -1,5 +1,3 @@
-package pkg2syou;
-
 class InvalidAgeException extends Exception {
 	InvalidAgeException(String message) {
 		super(message);

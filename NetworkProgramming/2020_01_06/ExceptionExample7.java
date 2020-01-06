@@ -1,6 +1,3 @@
-package pkg2syou;
-
-
 class Person {
 	int age;
 

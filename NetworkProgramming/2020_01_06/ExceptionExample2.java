@@ -1,4 +1,3 @@
-package pkg2syou;
 public class ExceptionExample2 {
 	public static void main(String[] args) {
 		int[] scores = new int[3];

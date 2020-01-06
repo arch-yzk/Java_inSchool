@@ -1,5 +1,3 @@
-package pkg2syou;
-
 //Silver7_11　例外の問題
 
 public class Silver7_1 {
