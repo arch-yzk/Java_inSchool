@@ -8,9 +8,9 @@ public class Silver7_1 {
 			
 			try {
 				int i = Integer.parseInt(string);
-				System.out.println("in try:" +  i);
+				System.out.println("in try:" + i);
 			}catch(Exception e) {
-				System.out.println("in catch" + i) ;
+				System.out.println("in catch" + i); //iはローカル変数なので処理できない
 			}finally {
 				System.out.println("in fainally");
 			}

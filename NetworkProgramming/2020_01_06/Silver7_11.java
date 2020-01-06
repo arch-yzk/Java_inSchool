@@ -7,15 +7,17 @@ public class Silver7_11 {
 		P p = new C();
 	
 		p.strToNum("a");
-			
 }
-class P{
-	public void strToNum(String s) throws NumberFormatException{
-		System.out.println("P:" + Integer.parseInt(s));
+
+	static class P {
+		public void strToNum(String s) throws NumberFormatException{
+			System.out.println("P:" + Integer.parseInt(s));
+		}
 	}
-}
-class C extends P{
-	public void strToNum(String s) throws Exception{
-		System.out.println("C:" + Integer.parseInt(s));
+
+	static class C extends P {
+		public void strToNum(String s) throws NumberFormatException{
+			System.out.println("C:" + Integer.parseInt(s));
+		}
 	}
 }
