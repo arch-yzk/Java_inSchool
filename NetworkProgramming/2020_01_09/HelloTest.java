@@ -10,8 +10,9 @@
 	④みんな挨拶がおわったら報告する
 */
 
-class Japan{
-	public void hello(){
+class Japan extends Thread{
+	//public void hello(){
+	public void run() {
 		for(int i = 0; i < 10; i++) {
 			System.out.println("こんにちは");
 			try{Thread.sleep(100);}catch(Exception e){}
@@ -19,8 +20,9 @@ class Japan{
 	}
 }
 
-class America{
-	public void hello(){
+class America extends Thread{
+	//public void hello(){
+	public void run(){
 		for(int i = 0; i < 10; i++){
 			System.out.println("ＨＥＬＬＯ");
 			try{Thread.sleep(100);}catch(Exception e){}
@@ -35,9 +37,22 @@ class HelloTest{
 		
 		America tom = new America();
 		
-		hanako.hello();
+		//hanako.hello();
+		hanako.start();
+		try{
+			hanako.join();
+		} catch(InterruptedException e){
+			System.out.println(e);
+		}
 		
-		tom.hello(); 
-	
+		//tom.hello();
+		tom.start();
+		try{
+			tom.join();
+		} catch(InterruptedException e){
+			System.out.println(e);
+		}
+
+		System.out.println("終了");
 	}
 }

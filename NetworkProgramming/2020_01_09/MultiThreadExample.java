@@ -1,7 +1,8 @@
 class Bank {
 	static int money = 0;
 	
-	static void addOneYen() {
+	//static void addOneYen() {
+	static  synchronized void addOneYen() {
 		money++;
 	}
 }
