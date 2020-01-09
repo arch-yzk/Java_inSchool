@@ -20,7 +20,7 @@ class Japan extends Thread{
 	}
 }
 
-class America extends Thread{
+class America implements Runnable{
 	//public void hello(){
 	public void run(){
 		for(int i = 0; i < 10; i++){
@@ -36,6 +36,7 @@ class HelloTest{
 		Japan hanako = new Japan();
 		
 		America tom = new America();
+		Thread tomRunnable = new Thread(tom);
 		
 		//hanako.hello();
 		hanako.start();
@@ -46,9 +47,11 @@ class HelloTest{
 		}
 		
 		//tom.hello();
-		tom.start();
+		//tom.start();
+		tomRunnable.start();
 		try{
-			tom.join();
+			//tom.join();
+			tomRunnable.join();
 		} catch(InterruptedException e){
 			System.out.println(e);
 		}
