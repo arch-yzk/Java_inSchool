@@ -58,7 +58,7 @@ class Operator extends Thread
             }
             Thread.yield();
             this.flag++;
-            if(this.flag >= 2)
+            if(this.flag >= random.nextInt())
             {
                 try
                 {
