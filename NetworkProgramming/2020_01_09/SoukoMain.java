@@ -25,7 +25,8 @@ class Operator extends Thread
     private Souko souko;
     private String name;
     private int pickCount;
-    private int flag = 0;
+    Random random = new Random();
+    private int flag = random.nextInt(2);
     private static Object monitor = new Object(); //ロックを確実にする専用オブジェクト
 
     Operator(Souko souko, String name, int pickCount)
@@ -69,7 +70,8 @@ class Operator extends Thread
                 }
                 finally
                 {
-                    this.flag = 0;
+                    //Random random = new Random();
+                    this.flag = random.nextInt(2);
                 }
             }
         }
