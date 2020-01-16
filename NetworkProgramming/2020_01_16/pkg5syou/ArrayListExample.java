@@ -1,6 +1,7 @@
 package pkg5syou;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListExample {
 	public static void main(String[] args) {
@@ -20,5 +21,6 @@ public class ArrayListExample {
 		for (int i = 0; i < months.size(); i++) {
 			System.out.println(months.get(i));
 		}
+		Iterator<String> it = months.iterator();
 	}
 }

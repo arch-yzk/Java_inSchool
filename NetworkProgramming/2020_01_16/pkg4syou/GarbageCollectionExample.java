@@ -1,6 +1,5 @@
 package pkg4syou;
 
-
 public class GarbageCollectionExample {
 	public static void main(String[] args) {
 		System.out.println("空きメモリサイズ:" + Runtime.getRuntime().freeMemory());

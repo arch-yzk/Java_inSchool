@@ -1,4 +1,5 @@
-package pkg5syou;import java.util.ArrayList;
+package pkg5syou;
+import java.util.ArrayList;
 import java.util.Collections;
 
 class Point implements Comparable<Point> {
