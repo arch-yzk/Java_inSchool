@@ -10,7 +10,8 @@ public class EventHandle extends Application {
 		stage.setHeight(140);
 
 		Button button = new Button("ボタン");
-		button.setOnAction(event -> System.out.println("ボタンが押されました"));
+		//button.setOnAction(event -> System.out.println("ボタンが押されました"));
+		button.setOnAction(event -> pushButton());
 
 		BorderPane root = new BorderPane();
 		root.setCenter(button);
@@ -18,6 +19,10 @@ public class EventHandle extends Application {
 		stage.show();
 	}
 
+	private void pushButton()
+	{
+		System.out.println("ボタンが押された");
+	}
 	public static void main(String[] args) {
 		launch();
 	}
