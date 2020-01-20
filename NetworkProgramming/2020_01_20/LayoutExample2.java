@@ -13,30 +13,28 @@ public class LayoutExample2 extends Application {
 		stage.setWidth(280);
 		stage.setHeight(140);
 
-		 // (2) コントロールの生成
-		 Button button1 = new Button("Top");
-		 Button button2 = new Button("Left");
-		 Button button3 = new Button("Center");
-		 Button button4 = new Button("Right");
-		 //Button button5 = new Button("Bottom");
-		 button5 = new Button("",new ImageView(new Image("dandelion.png")));
-		 button5.setOnAction(event -> Image());
-		 
-		 
-		 
-		 button1.setPrefSize(300, 30);
-		 button2.setPrefSize(100, 50);
-		 button3.setPrefSize(100, 50);
-		 button4.setPrefSize(100, 50);
-		 button5.setPrefSize(300, 30);
+		// (2) コントロールの生成
+		Button button1 = new Button("Top");
+		Button button2 = new Button("Left");
+		Button button3 = new Button("Center");
+		Button button4 = new Button("Right");
+		Button button5 = new Button("Bottom");
+		// button5 = new Button("",new ImageView(new Image("rust.png")));
+		button5.setOnAction(event -> Image());
 
-		 // (3) ルートペインを生成し、コントロールを配置
-		 BorderPane root = new BorderPane();
-		 root.setTop(button1);
-		 root.setLeft(button2);
-		 root.setCenter(button3);
-		 root.setRight(button4);
-		 root.setBottom(button5);
+		button1.setPrefSize(300, 30);
+		button2.setPrefSize(100, 50);
+		button3.setPrefSize(100, 50);
+		button4.setPrefSize(100, 50);
+		button5.setPrefSize(300, 30);
+
+		// (3) ルートペインを生成し、コントロールを配置
+		BorderPane root = new BorderPane();
+		root.setTop(button1);
+		root.setLeft(button2);
+		root.setCenter(button3);
+		root.setRight(button4);
+		root.setBottom(button5);
 
 
 		// (4) ルートペインを元にシーンを生成
