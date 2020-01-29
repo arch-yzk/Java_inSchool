@@ -51,16 +51,13 @@ public class Controls extends Application {
 		textField = new TextField("テキストフィールド");
 		
 		//画像
-		image = new Image("dandelion.png");
+		image = new Image("Rock_paper_scissors/Images/Rock.gif");
 		imageView = new ImageView( image );
 
 		button = new Button("OK");
 		button.setOnAction(event -> buttonPressed());
 
 		textArea = new TextArea("テキストエリア");
-		
-		
-		
 
 		VBox box = new VBox(5);
 		box.setPadding(new Insets(20, 25, 25, 25));

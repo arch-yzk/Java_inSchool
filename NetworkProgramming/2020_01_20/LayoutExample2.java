@@ -7,7 +7,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class LayoutExample2 extends Application {
-	Button button5;
 	public void start(Stage stage) {
 		// (1) メインウィンドウの設定
 		stage.setWidth(280);
