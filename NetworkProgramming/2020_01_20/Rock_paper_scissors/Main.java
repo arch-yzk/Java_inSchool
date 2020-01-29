@@ -1,43 +1,77 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 public class Main extends Application
 {
+    RadioButton radioButton1;
+    RadioButton radioButton2;
+    RadioButton radioButton3;
+    ToggleGroup toggleGroup;
+    Image image;
+    ImageView imageView;
+    Button button;
+    Stage stage;
+    TextArea textArea;
+    TextField textField;
+
     public void start(Stage stage)
     {
-        stage.setWidth(800);
-        stage.setHeight(600);
+        stage.setWidth(1200);
+        stage.setHeight(900);
+
+        radioButton1 = new RadioButton("グー");
+		radioButton2 = new RadioButton("チョキ");
+		radioButton3 = new RadioButton("パー");
+		toggleGroup = new ToggleGroup();
+		radioButton1.setToggleGroup(toggleGroup);
+		radioButton2.setToggleGroup(toggleGroup);
+		radioButton3.setToggleGroup(toggleGroup);
+        radioButton1.setSelected(true);
+        radioButton1.setOnAction(event -> Image(1));
+        radioButton2.setOnAction(event -> Image(2));
+        radioButton3.setOnAction(event -> Image(3));
         
-        Button button1 = new Button("Top");
-        Button button2 = new Button("Left1");
-        Button button3 = new Button("Left2");
-        Button button4 = new Button("Left3");
-        Button button5 = new Button("Right");
-        Button button6 = new Button("Bottom");
-        button1.setPrefSize(400, 300);
-        button2.setPrefSize(75, 75);
-        button3.setPrefSize(75, 75);
-        button4.setPrefSize(75, 75);
-        button5.setPrefSize(150, 150);
-        button6.setPrefSize(400, 100);
+        image = new Image("Images/Rock.gif");
+        imageView = new ImageView( image );
+        
+        button = new Button("勝負");
 
-        button2 = new Button("",new ImageView(new Image("Images/Rock.gif")));
-        button3 = new Button("",new ImageView(new Image("Images/Scissors.png")));
-        button4 = new Button("",new ImageView(new Image("Images/Paper.jpeg")));
+        textArea = new TextArea("テキストエリア");
+		
+		VBox box = new VBox(5);
+		box.setPadding(new Insets(20, 25, 25, 25));
 
-        root.getChildren().addAll(button1, button2, button3, button4, button5, button6);
+        box.getChildren().addAll(radioButton1, radioButton2, radioButton3, imageView, button);
+        
+        BorderPane root = new BorderPane();
+		root.setLeft(box);
+		root.setCenter(textArea);
 
-        Scene scene = new Scene(root);
-
-        stage.setScene(scene);
-
-        stage.show();
+		stage.setScene(new Scene(root));
+		stage.show();
     }
+
+    void Image(int flag)
+    {
+        if(flag == 2)
+        {
+            image = new Image("Images/Scissors.png");
+            imageView = new ImageView( image );
+        }
+    }
+
+    void buttonPressed()
+    {
+		textArea.clear();
+		textArea.appendText("\nラジオボタンの選択項目:" + ((RadioButton) toggleGroup.getSelectedToggle()).getText());
+		textArea.appendText("\nテキストフィールドの文字列:" + textField.getText());
+	}
     public static void main(String[] args)
     {
         launch();
