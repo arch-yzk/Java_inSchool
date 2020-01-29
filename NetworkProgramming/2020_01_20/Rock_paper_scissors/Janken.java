@@ -28,34 +28,34 @@ public class Janken extends Application
 
     public void start(Stage stage)
     {
-        stage.setWidth(1280);
-        stage.setHeight(800);
+        stage.setWidth(900);
+        stage.setHeight(600);
         stage.setTitle("じゃんけん");
 
         gu = new Button("グー");
         gu.setOnAction(event -> guPon());
-        gu.setPrefSize(130, 30);
+        gu.setPrefSize(300, 30);
 
         choki = new Button("チョキ");
         choki.setOnAction(event -> chokiPon());
-        choki.setPrefSize(130, 30);
+        choki.setPrefSize(300, 30);
 
         par = new Button("パー");
         par.setOnAction(event -> parPon());
-        par.setPrefSize(130, 30);
+        par.setPrefSize(300, 30);
 
         HBox hb = new HBox();
         hb.getChildren().add(gu);
         hb.getChildren().add(choki);
         hb.getChildren().add(par);
 
-        me =new Label("ME");
+        me = new Label("ME");
         com = new Label("COM");
         me.setGraphic(new ImageView(image1));
         com.setGraphic(new ImageView(image4));
 
         textArea = new TextArea("結果\n");
-        kekka = new Label("勝負");
+        kekka = new Label("");
         Font f1 = new Font(24);
         kekka.setFont(f1);
 
